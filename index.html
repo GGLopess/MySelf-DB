@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MySelf Tickets</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>MySelf Tickets DB</h1>
+    <p>Sistema de Gestão de Ingressos - MySelf</p>
+  </header>
+
+  <nav>
+    <a href="#dominio">Domínio</a>
+    <a href="#contexto">Contexto</a>
+    <a href="#modelagem">Modelagem DER</a>
+    <a href="#normais">Formas Normais</a>
+    <a href="#consultas">Consultas SQL</a>
+  </nav>
+
+  <main>
+
+    <section id="dominio" class="card">
+      <h2>1. Domínio do Banco de Dados</h2>
+      <p>Sistema focado no gerenciamento e comercialização de ingressos, loteamento e organização das festas e shows exclusivos promovidos pela produtora <strong>MySelf</strong>.</p>
+    </section>
+
+    <section id="contexto" class="card">
+      <h2>2. Contextualização e Problemas</h2>
+      <p>A MySelf organiza eventos de trap underground. Sem um SGBD relacional, a operação enfrentava:</p>
+      <ul>
+        <li><strong>Risco de Overbooking:</strong> Vendas acima da capacidade do local por falta de controle centralizado.</li>
+        <li><strong>Descontrole de Lotes:</strong> Mudanças manuais de preços geravam prejuízos.</li>
+        <li><strong>Duplicidade:</strong> Clientes cadastrados várias vezes em planilhas diferentes.</li>
+      </ul>
+    </section>
+
+    <section id="modelagem" class="card">
+      <h2>4. Modelagem Lógica (DER)</h2>
+      <p>Abaixo está a representação visual das tabelas e relacionamentos do banco de dados:</p>
+      
+      <div class="imagem-modelagem">
+        <img src="docs/modelagem_logica.png" alt="Modelagem Lógica do Banco de Dados MySelf">
+      </div>
+    </section>
+
+    <section id="normais" class="card">
+      <h2>5. Aplicação das Formas Normais</h2>
+      <div class="grid-normais">
+        <div class="box-normal">
+          <h3>1FN</h3>
+          <p>Campos atômicos (sem listas ou emails repetidos na mesma coluna).</p>
+        </div>
+        <div class="box-normal">
+          <h3>2FN</h3>
+          <p>Atributos dependem 100% da chave primária das tabelas.</p>
+        </div>
+        <div class="box-normal">
+          <h3>3FN</h3>
+          <p>Sem dependências entre colunas não-chave (dados de locais em tabela própria).</p>
+        </div>
+        <div class="box-normal">
+          <h3>4FN</h3>
+          <p>Atrações e Promoters separados para evitar tabelas duplicadas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="consultas" class="card">
+      <h2>6. Teste de Consultas SQL</h2>
+      <p>Clique em uma consulta abaixo para visualizar o comando SQL correspondente:</p>
+
+      <div class="painel-consultas">
+   
+        <div class="lista-botoes">
+          <button onclick="mostrarConsulta(1)">Consulta 1 - Festas e Locais</button>
+          <button onclick="mostrarConsulta(2)">Consulta 2 - Ingressos por Festa</button>
+          <button onclick="mostrarConsulta(3)">Consulta 3 - Faturamento Aprovado</button>
+        </div>
+
+        <div class="exibicao-sql">
+          <h3 id="titulo-sql">Selecione uma consulta</h3>
+          <pre id="codigo-sql">-- O código SQL aparecerá aqui ao clicar no botão</pre>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Atividade IV - Banco de Dados Relacional | Turma A</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
