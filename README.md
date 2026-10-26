@@ -190,7 +190,7 @@ Os scripts SQL completos do projeto estão organizados na pasta `sql/`:
 O banco de dados relacional foi implantado em ambiente de nuvem gerenciada através da plataforma **Aiven for MySQL**.
 
 ### Passos de Configuração na Nuvem:
-1. Instância do **MySQL 8.4** criada na região `AWS / South America (São Paulo)`.
+1. Instância do **MySQL 8.4** criada na região `North America (New York)`.
 2. Conexão remota estabelecida via SSL utilizando o **MySQL Workbench** com o usuário administrativo `avnadmin`.
 3. Execução dos scripts `01_schema.sql` e `02_seed.sql` para montagem e povoamento do ambiente de produção.
 
