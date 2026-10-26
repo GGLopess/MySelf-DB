@@ -71,20 +71,38 @@
 
     <section id="consultas" class="card">
       <h2>6. Teste de Consultas SQL</h2>
-      <p>Clique em uma consulta abaixo para visualizar o comando SQL correspondente:</p>
+      <p>Clique em uma consulta abaixo para visualizar o comando SQL correspondente e a simulação do resultado retornado pelo banco:</p>
 
       <div class="painel-consultas">
-   
+        
         <div class="lista-botoes">
           <button onclick="mostrarConsulta(1)">Consulta 1 - Festas e Locais</button>
-          <button onclick="mostrarConsulta(2)">Consulta 2 - Ingressos por Festa</button>
-          <button onclick="mostrarConsulta(3)">Consulta 3 - Faturamento Aprovado</button>
+          <button onclick="mostrarConsulta(2)">Consulta 2 - Setores e Preços</button>
+          <button onclick="mostrarConsulta(3)">Consulta 3 - Pedidos Aprovados</button>
+          <button onclick="mostrarConsulta(4)">Consulta 4 - Eventos WEB</button>
+          <button onclick="mostrarConsulta(5)">Consulta 5 - Faturamento Total</button>
+          <button onclick="mostrarConsulta(6)">Consulta 6 - Ingressos/Cliente</button>
+          <button onclick="mostrarConsulta(7)">Consulta 7 - Faixa de Preço</button>
+          <button onclick="mostrarConsulta(8)">Consulta 8 - Preço Médio</button>
+          <button onclick="mostrarConsulta(9)">Consulta 9 - Atrações/Festa</button>
+          <button onclick="mostrarConsulta(10)">Consulta 10 - Locais Grandes</button>
+          <button onclick="mostrarConsulta(11)">Consulta 11 - Relatório de Vendas</button>
+          <button onclick="mostrarConsulta(12)">Consulta 12 - Promoters/Evento</button>
+          <button onclick="mostrarConsulta(13)">Consulta 13 - Clientes VIP</button>
+          <button onclick="mostrarConsulta(14)">Consulta 14 - Pedidos Outubro</button>
+          <button onclick="mostrarConsulta(15)">Consulta 15 - Eventos por Tipo</button>
         </div>
 
         <div class="exibicao-sql">
           <h3 id="titulo-sql">Selecione uma consulta</h3>
+          <p id="desc-sql" class="desc-sql-texto"></p>
           <pre id="codigo-sql">-- O código SQL aparecerá aqui ao clicar no botão</pre>
+
+          <div id="tabela-resultado-container">
+            <!-- A tabela com a simulação do retorno do MySQL é montada aqui -->
+          </div>
         </div>
+
       </div>
     </section>
 
