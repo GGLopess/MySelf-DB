@@ -203,3 +203,11 @@ Para garantir o versionamento e a portabilidade do banco de dados completo (estr
 ### Comando utilizado para geração do Dump via linha de comando:
 ```bash
 mysqldump -h <HOST_AIVEN> -P <PORTA> -u avnadmin -p --databases myself_tickets_db > sql/dump_myself.sql
+```
+--- 
+
+## 9. Deploy e Estrutura do Repositório
+O projeto possui um painel web estático desenvolvido em HTML5, CSS3 e JavaScript publicado via GitHub Pages para demonstração interativa das consultas e documentação da modelagem.
+
+### Link do Front-end (GitHub Pages): 
+https://gglopess.github.io/MySelf-DB/
